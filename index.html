@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>BSSS</title>
+        <style>
+            body,html{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            .container{
+                background-color: palegoldenrod;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                background-color: antiquewhite;
+                padding: 50px;
+                border-radius: 20px;
+                border: 5px solid grey;
+            }
+            textarea{
+                height: 100px;
+                width: 200px;
+            }
+            p{
+                color: navy;
+                font-size: 150%;
+            }
+            span{
+                color:red;
+            }
+        </style>
+    </head>
+<body>
+    <div class="Container">
+        <div class="box">
+            <p>Type Master...</p>
+            <textarea id="inputtext" placeholder="Enter text"></textarea><br><br>
+            <p>Character Count:  <span id="count">0</span></p>
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById("inputtext");
+        let count = document.getElementById("count");
+        input.addEventListener('input', ()=>{
+            count.innerHTML = input.value.length;
+        })
+    </script>
+</body>
+</html>
