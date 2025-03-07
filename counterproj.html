@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            background-color: red;
+            border: 2px solid grey;
+            border-radius: 20px;
+        }
+        p{
+            color: blue;
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <p id="number">0</p>
+    <button onclick="minus()">-</button>
+    <button onclick="plus()">+</button>
+
+    <script>
+        let counter = 0;
+        function plus(){
+            document.getElementById("number").innerHTML = ++counter;
+        }
+        function minus(){
+            document.getElementById("number").innerHTML = --counter;
+        }
+
+    </script>
+</body>
+</html>
